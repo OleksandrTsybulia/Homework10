@@ -1,0 +1,148 @@
+:root {
+  --text-color: #696969;
+  --heading-color-main: #2f4f4f;
+  --second-text-color: #080808;
+}
+body {
+  background: linear-gradient(#d3d3d3 15%, #c0c0c0 85%);
+  font-family: Archivo, sans-serif;
+}
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #808080;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 200px;
+}
+.header-link {
+  color: var(--second-text-color);
+  position: fixed;
+  left: 10px;
+  z-index: 999;
+}
+.site-navigation {
+  font-size: 14px;
+  list-style: none;
+  line-height: 20px;
+}
+h1,
+h2 {
+  color: var(--heading-color-main);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+h1::after {
+  content: '✿';
+}
+p {
+  color: var(--text-color);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+a {
+  text-decoration: none;
+}
+/*Цей селектор має найбільшу специфічність (1,0,1)*/
+#other-information > p {
+  color: var(--second-text-color);
+}
+.game-description {
+  overflow: scroll;
+  width: 600px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+.game-description_about {
+  border: 2px solid;
+  background-color: #808080;
+  position: sticky;
+  text-align: center;
+  top: 0;
+}
+.game-description_short {
+  position: relative;
+}
+.game-description_list {
+  color: var(--text-color);
+  font-size: 16px;
+  list-style: none;
+  height: 150px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  position: absolute;
+  left: 220px;
+}
+form {
+  font-size: 18px;
+  color: var(--text-color);
+}
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='date'] {
+  border: 2px solid #101010;
+  border-radius: 4px;
+  background-color: #a9a9a9;
+}
+.first-name {
+  color: #a07a40;
+}
+textarea {
+  background-color: #a9a9a9;
+  border-radius: 6px;
+}
+button {
+  background-color: #303030;
+  color: #66ffcc;
+  border: 2px solid #101010;
+  border-radius: 6px;
+}
+button:hover {
+  background-color: #303030;
+  color: #707070;
+  border: 2px solid #101010;
+  border-radius: 6px;
+}
+footer {
+  background-color: #808080;
+}
+address {
+  font-size: 14px;
+  font-style: normal;
+}
+.mail-link {
+  margin-right: 35px;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+td {
+  text-align: right;
+}
+th {
+  text-align: center;
+}
+.no-border {
+  border-bottom: none;
+}
+.empty-column {
+  border-top: none;
+}
