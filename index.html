@@ -17,11 +17,10 @@
     />
   </head>
   <body>
-    <a href="#header" class="header-link">Вгору</a>
     <header id="header">
       <div class="container">
-        <nav>
-          <ul class="site-navigation">
+        <nav class="site-navigation">
+          <ul class="site-navigation_list">
             <li>
               <a href="#main-information">Основна інформація</a>
             </li>
@@ -51,7 +50,7 @@
       <section id="main-information">
         <div class="container">
           <h1>Відомості про студента</h1>
-          <p class="student-description">
+          <p>
             Мене звати Цибуля Олександр Олександрович, 25 років. Вивчився в ЦДУ
             ім.В.Винниченка на спеціальність право.
           </p>
@@ -63,18 +62,35 @@
           />
         </div>
       </section>
-      <section id="work-information">
-        <div class="container">
-          <h2>Місце роботи</h2>
-          <p>
-            Починаючи з 3-го курсу навчання на юридичній спеціальності,
-            влаштувався помічником пивовара в
-            <a href="https://www.instagram.com/dudlyar_krop/" target="_blank"
-              >"Традиційну броварню "ДУДЛЯР"</a
-            >. Через 3 роки сумлінної праці, показавши свої навички в данній
-            сфері та неабияку відданість своїй справі, був підвищений до посади
-            пивовара, на якій і працюю на данний момент.
-          </p>
+      <section id="work-information" class="container">
+        <div class="work-information_description">
+          <div class="work-information_about">
+            <h2>Місце роботи</h2>
+            <p>
+              Починаючи з 3-го курсу навчання на юридичній спеціальності,
+              влаштувався помічником пивовара в
+              <a href="https://www.instagram.com/dudlyar_krop/" target="_blank"
+                >"Традиційну броварню "ДУДЛЯР"</a
+              >. Через 3 роки сумлінної праці, показавши свої навички в данній
+              сфері та неабияку відданість своїй справі, був підвищений до
+              посади пивовара, на якій і працюю на данний момент.
+            </p>
+          </div>
+          <img
+            src="images/Brewerly.jpg"
+            alt="Brewerly"
+            width="500"
+            height="200"
+          />
+          <div class="work-information_fact">
+            <h2>Цікавий факт</h2>
+            <p>
+              Пиво старше за писемність і навіть за сільське господарство:
+              археологи вважають, що люди почали виготовляти перші зразки
+              пінного напою понад 9500 років до н. е., а вирощування зерна
+              багато в чому виникло заради варіння пива, а не хліба.
+            </p>
+          </div>
         </div>
       </section>
       <section id="hobby-information">
@@ -177,12 +193,16 @@
     </main>
     <footer id="contact-us">
       <div class="container">
-        <h2>Зворотній зв'язок</h2>
+        <p>Зворотній зв'язок</p>
         <address>
-          <a href="mailto:acybula17@gmail.com" class="mail-link"
-            >acybula17@gmail.com</a
-          >
-          <a href="tel:+380682047947">+380682047947</a>
+          <div>
+            <a href="mailto:acybula17@gmail.com" class="mail-link"
+              >acybula17@gmail.com</a
+            >
+          </div>
+          <div>
+            <a href="tel:+380682047947">+380682047947</a>
+          </div>
         </address>
       </div>
     </footer>
