@@ -57,17 +57,18 @@ p {
 a {
   text-decoration: none;
 }
+#main-information {
+  margin-bottom: 20px;
+}
 /*Цей селектор має найбільшу специфічність (1,0,1)*/
 #other-information > p {
   color: var(--second-text-color);
 }
-img {
-  margin-bottom: 20px;
-}
-.work-information_description {
+#work-information .container {
   display: flex;
   justify-content: center;
   gap: 40px;
+  margin-bottom: 20px;
 }
 .work-information_about {
   width: 400px;
@@ -105,7 +106,6 @@ img {
   list-style: none;
   height: 150px;
   line-height: 20px;
-  margin-bottom: 15px;
   position: absolute;
   left: 220px;
   overflow: hidden;
