@@ -1,7 +1,8 @@
 :root {
-  --text-color: #696969;
-  --heading-color-main: #2f4f4f;
-  --second-text-color: #080808;
+  --background-dark: #101817;
+  --background-dark-second: #182523;
+  --links-color: #d6a45f;
+  --text-color-light: #e9ece7;
 }
 body {
   background: linear-gradient(#d3d3d3 15%, #c0c0c0 85%);
@@ -21,11 +22,12 @@ ul {
   padding: 0;
 }
 header {
-  background-color: #808080;
+  background-color: var(--background-dark-second);
 }
 header .container {
   display: flex;
   justify-content: center;
+  height: auto;
 }
 .site-navigation_list {
   font-size: 14px;
@@ -36,79 +38,136 @@ header .container {
 .site-navigation_list a {
   display: block;
   padding: 40px 0;
-  color: #66ffcc;
-}
-h1,
-h2 {
-  color: var(--heading-color-main);
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-h1::after {
-  content: '✿';
-}
-p {
-  color: var(--text-color);
-  font-size: 16px;
-  margin-bottom: 15px;
+  color: var(--text-color-light);
 }
 a {
   text-decoration: none;
 }
 #main-information {
-  margin-bottom: 20px;
+  background-color: var(--background-dark);
+  height: auto;
+  padding: 40px 120px;
 }
-/*Цей селектор має найбільшу специфічність (1,0,1)*/
-#other-information > p {
-  color: var(--second-text-color);
+#main-information .container {
+  display: flex;
+  gap: 40px;
+}
+.main-information_about {
+  width: 450px;
+}
+.main-information_about h1 {
+  color: var(--text-color-light);
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+.main-information_about p {
+  color: #aab5ae;
+  line-height: 20px;
+}
+#work-information {
+  height: auto;
+  padding: 40px 120px;
+  background-color: var(--text-color-light);
 }
 #work-information .container {
   display: flex;
-  justify-content: center;
   gap: 40px;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 .work-information_about {
-  width: 400px;
-  height: 200px;
-  border: 2px solid var(--second-text-color);
-  border-radius: 6px;
-  overflow: hidden;
+  width: 460px;
+}
+.work-information_about a {
+  color: var(--links-color);
+}
+.work-information_about h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #192725;
+}
+.work-information_about p {
+  color: var(--background-dark-second);
+  line-height: 20px;
 }
 .work-information_fact {
-  width: 400px;
-  height: 200px;
-  border: 2px solid var(--second-text-color);
-  border-radius: 6px;
+  height: 100px;
+  background-color: var(--background-dark-second);
+  padding: 5px 10px;
   overflow: hidden;
 }
-.game-description {
-  overflow: scroll;
-  width: 600px;
-  height: 300px;
+.work-information_fact h2 {
+  color: var(--text-color-light);
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 15px;
+}
+.work-information_fact p {
+  color: #aab5ae;
+  line-height: 20px;
+}
+#hobby-information {
+  background-color: var(--background-dark);
+  height: 500px;
+  padding: 40px 120px;
+}
+#hobby-information h2 {
+  color: var(--text-color-light);
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+#hobby-information p {
+  color: #aab5ae;
+  margin-bottom: 15px;
+}
+#hobby-information a {
+  color: var(--links-color);
+}
+.game-description {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 500px;
+}
+.game-description_main {
+  overflow: scroll;
+  width: auto;
+  height: 300px;
 }
 .game-description_about {
   border: 2px solid;
-  background-color: #808080;
+  background-color: #aab5ae;
   position: sticky;
   text-align: center;
   top: 0;
 }
-.game-description_short {
-  position: relative;
+#other-information {
+  height: auto;
+  padding: 40px 120px;
+  background-color: var(--text-color-light);
 }
-.game-description_list {
-  color: var(--text-color);
-  font-size: 16px;
-  list-style: none;
-  height: 150px;
+#other-information h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #192725;
+}
+#other-information p {
+  color: var(--background-dark-second);
   line-height: 20px;
-  position: absolute;
-  left: 220px;
-  overflow: hidden;
+}
+#contact-us {
+  height: auto;
+  background-color: var(--background-dark);
+  padding: 40px 120px;
+}
+#contact-us p {
+  color: var(--text-color-light);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+#contact-us a {
+  color: var(--links-color);
+  margin-right: 20px;
 }
 form {
   font-size: 18px;
@@ -140,26 +199,6 @@ button:hover {
   color: #707070;
   border: 2px solid #101010;
   border-radius: 6px;
-}
-footer {
-  background-color: #808080;
-}
-footer .container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
-}
-footer .container address {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-footer .container p {
-  color: var(--second-text-color);
-}
-address {
-  font-size: 14px;
-  font-style: normal;
 }
 table,
 th,
