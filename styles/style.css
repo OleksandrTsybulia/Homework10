@@ -16,6 +16,7 @@ body {
 }
 h1,
 h2,
+h3,
 p,
 ul {
   margin: 0;
@@ -119,11 +120,13 @@ a {
 #hobby-information a {
   color: var(--links-color);
 }
+.hobby-information_about {
+  margin-bottom: 15px;
+}
 .game-description {
   display: flex;
   flex-direction: row-reverse;
   gap: 50px;
-  padding: 15px 0;
 }
 .game-description_main {
   overflow: scroll;
@@ -136,6 +139,11 @@ a {
   position: sticky;
   text-align: center;
   top: 0;
+  margin-bottom: 10px;
+}
+.game-logo {
+  height: auto;
+  width: 160px;
 }
 #other-information {
   padding: 40px 0;
